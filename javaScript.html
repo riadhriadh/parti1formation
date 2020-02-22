@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+        <script>
+                function functionSimpleAlert() {
+                  alert("Hello! I am an alert box!");
+                }
+                function functionAlertConfirmation() {
+                confirm("Press a button!");
+                }
+                function  calculer(x,y){
+                  var some =x+y;
+                  document.getElementById('demoCalcule').innerHTML = " Some :"+some;
+                }
+                function bgChange(bg) {
+                    document.getElementById("tabColor").style.background = bg;
+                }
+                </script>
+    <title>Page 1</title>
+    <style>
+      .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: #1976d2;
+        color: white;
+        text-align: center;
+        height: 8%;
+      }
+      .main {
+        position: fixed;
+        width: 100%;
+        background: gold;
+        height: 82%;
+        text-align: center;
+
+      }
+      
+      .listExample{
+        margin-bottom: 4%;
+        overflow-y: scroll;
+      }
+
+      #imagaArticle {
+        height: 80%;
+        width: 90%;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <header style="background-color: #1976d2;height: 4%">
+ 
+        <nav style="padding:1.2%">
+          <a href="/html/" style="text-align: center"> HTML</a> | <a href="/css/">CSS</a> |
+          <a href="/js/">JavaScript</a> 
+        </nav>
+ 
+      </div>
+    </header>
+    <div class="main">
+    <div class="listExample"> 
+        <div style="height: 150px;width: 50%; border-color: #373737;
+        border-style: solid;
+        border-width: 1px;margin: 5px">
+            <div>OnClick event</div>
+                <div>
+                        <button onclick="functionSimpleAlert()">Exmaple 1  alert</button>
+                        <button onclick="functionAlertConfirmation()">Exmaple 2  alert Confirmation</button>     
+                </div>
+                <div>
+            <button type="button"
+                    onclick="document.getElementById('demo').innerHTML = Date()">
+                    example 2 date</button>
+                    
+                    <p id="demo"></p>
+                    </div>
+                    <div>
+                            <button onclick="calculer(5,3)">Calcule 5+3</button>  
+                              <div id="demoCalcule"></div>
+                    </div>
+        </div>
+      
+        <div class="listExample"> 
+                <div style="height: 150px;width: 50%; border-color: #373737;
+                border-style: solid;
+                border-width: 1px;margin: 5px">
+                <div>Mouse event</div>
+            <table id="tabColor" style="width:300px;height:100px;padding: 30px">
+                    <tr>
+                      <td onmouseover="bgChange(this.style.backgroundColor)" 
+                      onmouseout="bgChange('transparent')"
+                      style="background-color:Khaki">
+                      </td>
+                      <td onmouseover="bgChange(this.style.backgroundColor)" 
+                      onmouseout="bgChange('transparent')"
+                      style="background-color:PaleGreen">
+                      </td>
+                      <td onmouseover="bgChange(this.style.backgroundColor)" 
+                      onmouseout="bgChange('transparent')"
+                      style="background-color:Silver">
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+    </div>
+      
+    </div>
+    <footer class="footer">footer</footer>
+  </body>
+</html>
